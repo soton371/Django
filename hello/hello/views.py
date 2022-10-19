@@ -1,4 +1,9 @@
+from multiprocessing import context
 from django.shortcuts import render, HttpResponse
 
 def home(request):
-    return HttpResponse('Hello World')
+    name = ['soton','turjo','rana']
+    context = {
+        'name':name
+    }
+    return render(request, 'home.html', context)
