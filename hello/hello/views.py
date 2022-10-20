@@ -2,6 +2,7 @@ from multiprocessing import context
 from pydoc import render_doc
 from unicodedata import name
 from django.shortcuts import render, HttpResponse
+from tuition.models import Contact
 
 def home(request):
     name = ['soton','turjo','rana']
@@ -19,4 +20,6 @@ def contact(request):
         print(name)
         print(phone)
         print(content)
+        obj = Contact(name=name,phone=phone,content=content)
+        obj.save()
     return render(request,'contact.html')
