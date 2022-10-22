@@ -9,21 +9,7 @@
 
     {% csrf_token %}
 
-      <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">Name</label>
-        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name here" name="name">
-      </div>
-
-      <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">Phone</label>
-        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="phone here" name="phone">
-      </div>
-
-
-      <div class="mb-3">
-        <label for="exampleFormControlTextarea1" class="form-label">Content</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name = "content"></textarea>
-      </div>
+    {{form}}
 
       <button type = 'Submit'>Submit</button>
     </form>
